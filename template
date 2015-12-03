@@ -3,16 +3,22 @@
         <meta charset="utf-8">
 
 <style>
-.sub {margin-left:20px;}
+.title {font-size:24px; font-weight:bold;}
+.title .main {display:none;}
+.title:hover .main{display:block;}
+.main {margin-left:10px; font-size:20px; font-weight:normal;}
+.sub {margin-left:30px; font-size:16px; font-weight:normal;}
 .main .sub {display:none;}
 .main:hover {color:green;}
-.main:hover .sub {display:inline;}
+.main:active .sub {display:inline;}
 </style>
 
 <html>
+<div class="title">Nouns
 {% autoescape false %}
 {% for el in whole %}
 {{el}}
 {% endfor %}
 {% endautoescape%}
+</div>
 </html>
