@@ -1,0 +1,45 @@
+# -*- coding:utf-8 -*-
+
+import codecs, re
+from flask import Flask, render_template, request
+
+arr = []
+
+app = Flask(__name__)
+@app.route('/')
+
+
+def index():
+    reg_class = re.compile(';([^;]+?);\r\n')
+    reg_word = re.compile('^(.+?);')
+    
+    global arr
+
+    f = codecs.open('N.csv', 'r', 'cp1251')
+    for line in f:
+        classif = reg_class.findall(line)
+        if classif != []:
+            classif = ''.join(classif)
+            if ''.join(classif) not in arr:
+                arr.append(''.join(classif))
+
+    whole = []
+    for classif in arr:
+        string = '<div class="main">' + classif + '<br>'
+        f = codecs.open('N.csv', 'r', 'cp1251')
+        for line in f:
+            if ''.join(reg_class.findall(line)) == classif:
+                string += '<p class="sub">' + ''.join(reg_word.findall(line)) + '</p>'
+        string += '</div>'
+        whole.append(string)
+                
+    return render_template('html.html', whole = whole)
+
+    f.close()
+
+app.run(debug=True)
+
+
+
+
+
