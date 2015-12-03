@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+
+<style>
+.sub {margin-left:20px;}
+.main .sub {display:none;}
+.main:hover {color:green;}
+.main:hover .sub {display:inline;}
+</style>
+
+<html>
+{% autoescape false %}
+{% for el in whole %}
+{{el}}
+{% endfor %}
+{% endautoescape%}
+</html>
