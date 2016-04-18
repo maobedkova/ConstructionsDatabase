@@ -1,0 +1,14 @@
+[2016-04-02 12:47:04,945][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-04-02 12:47:05,074][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-04-02 12:47:05,320][INFO ][node                     ] [Galactus] version[2.1.1], pid[9096], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-04-02 12:47:05,324][INFO ][node                     ] [Galactus] initializing ...
+[2016-04-02 12:47:05,396][INFO ][plugins                  ] [Galactus] loaded [], sites []
+[2016-04-02 12:47:05,433][INFO ][env                      ] [Galactus] using [1] data paths, mounts [[OS (C:)]], net usable_space [147.3gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-04-02 12:47:08,154][INFO ][node                     ] [Galactus] initialized
+[2016-04-02 12:47:08,156][INFO ][node                     ] [Galactus] starting ...
+[2016-04-02 12:47:08,497][INFO ][transport                ] [Galactus] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-04-02 12:47:08,512][INFO ][discovery                ] [Galactus] elasticsearch/NDJpjbZxQB-tSOzELY9nXQ
+[2016-04-02 12:47:12,579][INFO ][cluster.service          ] [Galactus] new_master {Galactus}{NDJpjbZxQB-tSOzELY9nXQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-04-02 12:47:12,753][INFO ][gateway                  ] [Galactus] recovered [3] indices into cluster_state
+[2016-04-02 12:47:13,032][INFO ][http                     ] [Galactus] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-04-02 12:47:13,036][INFO ][node                     ] [Galactus] started

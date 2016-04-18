@@ -1,0 +1,91 @@
+[2016-03-30 00:48:43,407][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-30 00:48:43,532][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-30 00:48:43,761][INFO ][node                     ] [Miguel Santos] version[2.1.1], pid[5380], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-30 00:48:43,765][INFO ][node                     ] [Miguel Santos] initializing ...
+[2016-03-30 00:48:43,831][INFO ][plugins                  ] [Miguel Santos] loaded [], sites []
+[2016-03-30 00:48:43,868][INFO ][env                      ] [Miguel Santos] using [1] data paths, mounts [[OS (C:)]], net usable_space [148.8gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-30 00:48:46,501][INFO ][node                     ] [Miguel Santos] initialized
+[2016-03-30 00:48:46,503][INFO ][node                     ] [Miguel Santos] starting ...
+[2016-03-30 00:48:46,817][INFO ][transport                ] [Miguel Santos] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-30 00:48:46,833][INFO ][discovery                ] [Miguel Santos] elasticsearch/fUqq3uGNQXye3YLUt3dxzQ
+[2016-03-30 00:48:50,903][INFO ][cluster.service          ] [Miguel Santos] new_master {Miguel Santos}{fUqq3uGNQXye3YLUt3dxzQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-30 00:48:51,059][INFO ][gateway                  ] [Miguel Santos] recovered [3] indices into cluster_state
+[2016-03-30 00:48:51,427][INFO ][http                     ] [Miguel Santos] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-30 00:48:51,432][INFO ][node                     ] [Miguel Santos] started
+[2016-03-30 03:35:17,009][WARN ][http.netty               ] [Miguel Santos] Caught exception while handling client http traffic, closing connection [id: 0x9c84837e, /0:0:0:0:0:0:0:1:60404 => /0:0:0:0:0:0:0:1:9200]
+java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2016-03-30 03:35:20,914][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-30 03:35:20,917][INFO ][node                     ] [Miguel Santos] stopping ...
+[2016-03-30 03:35:21,038][INFO ][node                     ] [Miguel Santos] stopped
+[2016-03-30 03:35:21,040][INFO ][node                     ] [Miguel Santos] closing ...
+[2016-03-30 03:35:21,050][INFO ][node                     ] [Miguel Santos] closed
+[2016-03-30 18:16:31,670][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-30 18:16:31,763][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-30 18:16:31,982][INFO ][node                     ] [Norman Osborn] version[2.1.1], pid[7524], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-30 18:16:31,986][INFO ][node                     ] [Norman Osborn] initializing ...
+[2016-03-30 18:16:32,052][INFO ][plugins                  ] [Norman Osborn] loaded [], sites []
+[2016-03-30 18:16:32,091][INFO ][env                      ] [Norman Osborn] using [1] data paths, mounts [[OS (C:)]], net usable_space [148.6gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-30 18:16:34,487][INFO ][node                     ] [Norman Osborn] initialized
+[2016-03-30 18:16:34,490][INFO ][node                     ] [Norman Osborn] starting ...
+[2016-03-30 18:16:34,803][INFO ][transport                ] [Norman Osborn] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-30 18:16:34,818][INFO ][discovery                ] [Norman Osborn] elasticsearch/AWQWdyXARGKaz4wUzLvOvw
+[2016-03-30 18:16:38,879][INFO ][cluster.service          ] [Norman Osborn] new_master {Norman Osborn}{AWQWdyXARGKaz4wUzLvOvw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-30 18:16:39,002][INFO ][gateway                  ] [Norman Osborn] recovered [3] indices into cluster_state
+[2016-03-30 18:16:39,396][INFO ][http                     ] [Norman Osborn] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-30 18:16:39,401][INFO ][node                     ] [Norman Osborn] started
+[2016-03-30 18:23:52,506][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-30 18:23:52,508][INFO ][node                     ] [Norman Osborn] stopping ...
+[2016-03-30 18:23:52,597][INFO ][node                     ] [Norman Osborn] stopped
+[2016-03-30 18:23:52,600][INFO ][node                     ] [Norman Osborn] closing ...
+[2016-03-30 18:23:52,605][INFO ][node                     ] [Norman Osborn] closed
+[2016-03-30 21:33:26,671][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-30 21:33:26,860][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-30 21:33:27,226][INFO ][node                     ] [Stygorr] version[2.1.1], pid[11292], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-30 21:33:27,232][INFO ][node                     ] [Stygorr] initializing ...
+[2016-03-30 21:33:27,342][INFO ][plugins                  ] [Stygorr] loaded [], sites []
+[2016-03-30 21:33:27,402][INFO ][env                      ] [Stygorr] using [1] data paths, mounts [[OS (C:)]], net usable_space [148.6gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-30 21:33:30,094][INFO ][node                     ] [Stygorr] initialized
+[2016-03-30 21:33:30,095][INFO ][node                     ] [Stygorr] starting ...
+[2016-03-30 21:33:30,420][INFO ][transport                ] [Stygorr] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-30 21:33:30,435][INFO ][discovery                ] [Stygorr] elasticsearch/io58D0BuTL6atj1c3Ti36A
+[2016-03-30 21:33:34,494][INFO ][cluster.service          ] [Stygorr] new_master {Stygorr}{io58D0BuTL6atj1c3Ti36A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-30 21:33:34,812][INFO ][gateway                  ] [Stygorr] recovered [3] indices into cluster_state
+[2016-03-30 21:33:35,214][INFO ][http                     ] [Stygorr] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-30 21:33:35,219][INFO ][node                     ] [Stygorr] started
+[2016-03-30 22:56:00,758][WARN ][http.netty               ] [Stygorr] Caught exception while handling client http traffic, closing connection [id: 0xfd58160e, /0:0:0:0:0:0:0:1:49925 => /0:0:0:0:0:0:0:1:9200]
+java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2016-03-30 23:04:05,271][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-30 23:04:05,275][INFO ][node                     ] [Stygorr] stopping ...
+[2016-03-30 23:04:05,412][INFO ][node                     ] [Stygorr] stopped
+[2016-03-30 23:04:05,414][INFO ][node                     ] [Stygorr] closing ...
+[2016-03-30 23:04:05,426][INFO ][node                     ] [Stygorr] closed

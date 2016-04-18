@@ -1,0 +1,14 @@
+[2016-01-28 11:09:48,533][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-01-28 11:09:48,679][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-01-28 11:09:48,918][INFO ][node                     ] [Edward "Ned" Buckman] version[2.1.1], pid[10148], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-01-28 11:09:48,918][INFO ][node                     ] [Edward "Ned" Buckman] initializing ...
+[2016-01-28 11:09:48,980][INFO ][plugins                  ] [Edward "Ned" Buckman] loaded [], sites []
+[2016-01-28 11:09:49,033][INFO ][env                      ] [Edward "Ned" Buckman] using [1] data paths, mounts [[OS (C:)]], net usable_space [163.8gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-01-28 11:09:51,739][INFO ][node                     ] [Edward "Ned" Buckman] initialized
+[2016-01-28 11:09:51,739][INFO ][node                     ] [Edward "Ned" Buckman] starting ...
+[2016-01-28 11:09:52,340][INFO ][transport                ] [Edward "Ned" Buckman] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-01-28 11:09:52,340][INFO ][discovery                ] [Edward "Ned" Buckman] elasticsearch/dXXdPKggTimgltlKktUoOA
+[2016-01-28 11:09:56,432][INFO ][cluster.service          ] [Edward "Ned" Buckman] new_master {Edward "Ned" Buckman}{dXXdPKggTimgltlKktUoOA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-01-28 11:09:56,510][INFO ][gateway                  ] [Edward "Ned" Buckman] recovered [0] indices into cluster_state
+[2016-01-28 11:09:56,627][INFO ][http                     ] [Edward "Ned" Buckman] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-01-28 11:09:56,632][INFO ][node                     ] [Edward "Ned" Buckman] started

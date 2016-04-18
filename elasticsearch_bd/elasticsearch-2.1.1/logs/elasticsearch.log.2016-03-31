@@ -1,0 +1,19 @@
+[2016-03-31 13:06:50,211][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-31 13:06:50,338][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-31 13:06:50,600][INFO ][node                     ] [Bloodlust II] version[2.1.1], pid[1588], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-31 13:06:50,604][INFO ][node                     ] [Bloodlust II] initializing ...
+[2016-03-31 13:06:50,675][INFO ][plugins                  ] [Bloodlust II] loaded [], sites []
+[2016-03-31 13:06:50,715][INFO ][env                      ] [Bloodlust II] using [1] data paths, mounts [[OS (C:)]], net usable_space [148.4gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-31 13:06:53,428][INFO ][node                     ] [Bloodlust II] initialized
+[2016-03-31 13:06:53,430][INFO ][node                     ] [Bloodlust II] starting ...
+[2016-03-31 13:06:53,773][INFO ][transport                ] [Bloodlust II] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-31 13:06:53,786][INFO ][discovery                ] [Bloodlust II] elasticsearch/LjEzcDjgRM-uGr5JpuJl-Q
+[2016-03-31 13:06:57,832][INFO ][cluster.service          ] [Bloodlust II] new_master {Bloodlust II}{LjEzcDjgRM-uGr5JpuJl-Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-31 13:06:57,983][INFO ][gateway                  ] [Bloodlust II] recovered [3] indices into cluster_state
+[2016-03-31 13:06:58,439][INFO ][http                     ] [Bloodlust II] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-31 13:06:58,450][INFO ][node                     ] [Bloodlust II] started
+[2016-03-31 13:10:04,055][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-31 13:10:04,061][INFO ][node                     ] [Bloodlust II] stopping ...
+[2016-03-31 13:10:04,161][INFO ][node                     ] [Bloodlust II] stopped
+[2016-03-31 13:10:04,166][INFO ][node                     ] [Bloodlust II] closing ...
+[2016-03-31 13:10:04,175][INFO ][node                     ] [Bloodlust II] closed

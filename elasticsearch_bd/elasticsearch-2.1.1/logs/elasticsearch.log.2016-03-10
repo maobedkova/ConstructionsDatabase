@@ -1,0 +1,247 @@
+[2016-03-10 10:48:50,862][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-10 10:48:51,109][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-10 10:48:51,503][INFO ][node                     ] [Sagittarius] version[2.1.1], pid[7928], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-10 10:48:51,509][INFO ][node                     ] [Sagittarius] initializing ...
+[2016-03-10 10:48:51,639][INFO ][plugins                  ] [Sagittarius] loaded [], sites []
+[2016-03-10 10:48:51,708][INFO ][env                      ] [Sagittarius] using [1] data paths, mounts [[OS (C:)]], net usable_space [162.2gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-10 10:48:55,436][INFO ][node                     ] [Sagittarius] initialized
+[2016-03-10 10:48:55,438][INFO ][node                     ] [Sagittarius] starting ...
+[2016-03-10 10:48:55,939][INFO ][transport                ] [Sagittarius] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-10 10:48:55,961][INFO ][discovery                ] [Sagittarius] elasticsearch/ecK0mYgITbOItjg6zfaoKQ
+[2016-03-10 10:49:00,042][INFO ][cluster.service          ] [Sagittarius] new_master {Sagittarius}{ecK0mYgITbOItjg6zfaoKQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-10 10:49:00,246][INFO ][gateway                  ] [Sagittarius] recovered [3] indices into cluster_state
+[2016-03-10 10:49:00,650][INFO ][http                     ] [Sagittarius] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-10 10:49:00,654][INFO ][node                     ] [Sagittarius] started
+[2016-03-10 10:49:38,456][INFO ][rest.suppressed          ] /verbs/vn Params: {index=verbs, type=vn}
+java.lang.IllegalArgumentException: No feature for name [vn]
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.fromName(GetIndexRequest.java:82)
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.convertToFeatures(GetIndexRequest.java:95)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:77)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2016-03-10 12:57:19,997][INFO ][rest.suppressed          ] /verbs/vn Params: {index=verbs, type=vn}
+java.lang.IllegalArgumentException: No feature for name [vn]
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.fromName(GetIndexRequest.java:82)
+	at org.elasticsearch.action.admin.indices.get.GetIndexRequest$Feature.convertToFeatures(GetIndexRequest.java:95)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:77)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2016-03-10 13:02:12,738][DEBUG][action.search.type       ] [Sagittarius] [verbs][1], node[ecK0mYgITbOItjg6zfaoKQ], [P], v[4], s[STARTED], a[id=zV-uwLW-RMurgmi1N8AGBQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@db2abf]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,738][DEBUG][action.search.type       ] [Sagittarius] [verbs][3], node[ecK0mYgITbOItjg6zfaoKQ], [P], v[4], s[STARTED], a[id=d7ualxNTRLW9Shr1kHJI_Q]: Failed to execute [org.elasticsearch.action.search.SearchRequest@db2abf] lastShard [true]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,738][DEBUG][action.search.type       ] [Sagittarius] [verbs][0], node[ecK0mYgITbOItjg6zfaoKQ], [P], v[4], s[STARTED], a[id=9uEvESTXSMmPe1zxzXr6bQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@db2abf] lastShard [true]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,738][DEBUG][action.search.type       ] [Sagittarius] [verbs][4], node[ecK0mYgITbOItjg6zfaoKQ], [P], v[4], s[STARTED], a[id=KgNN4_wfSWKdHE6Sb9UYJA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@db2abf] lastShard [true]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,738][DEBUG][action.search.type       ] [Sagittarius] [verbs][2], node[ecK0mYgITbOItjg6zfaoKQ], [P], v[4], s[STARTED], a[id=qlbRhEcgRI6ld4-zmNGcpQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@db2abf] lastShard [true]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,784][DEBUG][action.search.type       ] [Sagittarius] All shards failed for phase: [query]
+RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+Caused by: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-10 13:02:12,872][INFO ][rest.suppressed          ] /verbs/vn/_search Params: {index=verbs, type=vn}
+Failed to execute phase [query], all shards failed; shardFailures {[ecK0mYgITbOItjg6zfaoKQ][verbs][0]: RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]]; }{[ecK0mYgITbOItjg6zfaoKQ][verbs][1]: RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]]; }{[ecK0mYgITbOItjg6zfaoKQ][verbs][2]: RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]]; }{[ecK0mYgITbOItjg6zfaoKQ][verbs][3]: RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]]; }{[ecK0mYgITbOItjg6zfaoKQ][verbs][4]: RemoteTransportException[[Sagittarius][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"id":3,"noun":"анекдот","class_noun":"абстрактные имена","verb":"звучать","tax_verb":"свойство, проявление","act_verb":"звук","collocation":"звучать как анекдот","special construction":0,"subject":"рассказ, вывод","example":"Не знаю, наверное, вначале мой рассказ звучал как анекдот.","freq":6}]]; nested: SearchParseException[failed to parse search source. unknown search element [id]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [id]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-10 13:02:55,190][INFO ][cluster.metadata         ] [Sagittarius] [verbs] deleting index
+[2016-03-10 13:03:05,774][INFO ][cluster.metadata         ] [Sagittarius] [verbs] creating index, cause [api], templates [], shards [5]/[1], mappings [vn]
+[2016-03-10 13:10:10,815][INFO ][cluster.metadata         ] [Sagittarius] [verbs] deleting index
+[2016-03-10 13:10:15,102][INFO ][cluster.metadata         ] [Sagittarius] [verbs] creating index, cause [api], templates [], shards [5]/[1], mappings [vn]
+[2016-03-10 13:17:09,967][INFO ][cluster.metadata         ] [Sagittarius] [verbs] deleting index
+[2016-03-10 13:17:30,442][INFO ][cluster.metadata         ] [Sagittarius] [verbs] creating index, cause [api], templates [], shards [5]/[1], mappings [vn]
+[2016-03-10 13:32:45,365][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-10 13:32:45,368][INFO ][node                     ] [Sagittarius] stopping ...
+[2016-03-10 13:32:45,467][INFO ][node                     ] [Sagittarius] stopped
+[2016-03-10 13:32:45,470][INFO ][node                     ] [Sagittarius] closing ...
+[2016-03-10 13:32:45,494][INFO ][node                     ] [Sagittarius] closed

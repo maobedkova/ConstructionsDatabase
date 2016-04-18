@@ -1,0 +1,36 @@
+[2016-03-17 11:35:09,294][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-17 11:35:09,429][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-17 11:35:09,666][INFO ][node                     ] [Penance] version[2.1.1], pid[908], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-17 11:35:09,670][INFO ][node                     ] [Penance] initializing ...
+[2016-03-17 11:35:09,731][INFO ][plugins                  ] [Penance] loaded [], sites []
+[2016-03-17 11:35:09,763][INFO ][env                      ] [Penance] using [1] data paths, mounts [[OS (C:)]], net usable_space [159.3gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-17 11:35:12,168][INFO ][node                     ] [Penance] initialized
+[2016-03-17 11:35:12,170][INFO ][node                     ] [Penance] starting ...
+[2016-03-17 11:35:12,483][INFO ][transport                ] [Penance] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-17 11:35:12,499][INFO ][discovery                ] [Penance] elasticsearch/4N4VC9PqRZ6AxmvRgYTc1g
+[2016-03-17 11:35:16,572][INFO ][cluster.service          ] [Penance] new_master {Penance}{4N4VC9PqRZ6AxmvRgYTc1g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-17 11:35:16,744][INFO ][gateway                  ] [Penance] recovered [3] indices into cluster_state
+[2016-03-17 11:35:17,111][INFO ][http                     ] [Penance] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-17 11:35:17,117][INFO ][node                     ] [Penance] started
+[2016-03-17 18:43:59,259][WARN ][http.netty               ] [Penance] Caught exception while handling client http traffic, closing connection [id: 0x38ab2452, /0:0:0:0:0:0:0:1:58386 => /0:0:0:0:0:0:0:1:9200]
+java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2016-03-17 18:44:05,840][INFO ][bootstrap                ] running graceful exit on windows
+[2016-03-17 18:44:05,840][INFO ][node                     ] [Penance] stopping ...
+[2016-03-17 18:44:05,940][INFO ][node                     ] [Penance] stopped
+[2016-03-17 18:44:05,940][INFO ][node                     ] [Penance] closing ...
+[2016-03-17 18:44:05,940][INFO ][node                     ] [Penance] closed

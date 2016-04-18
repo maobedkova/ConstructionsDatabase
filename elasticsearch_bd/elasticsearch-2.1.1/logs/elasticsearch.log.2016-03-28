@@ -1,0 +1,1229 @@
+[2016-03-28 19:42:18,773][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-03-28 19:42:18,889][WARN ][bootstrap                ] unable to install syscall filter: syscall filtering not supported for OS: 'Windows 10'
+[2016-03-28 19:42:19,107][INFO ][node                     ] [Captain Omen] version[2.1.1], pid[8844], build[40e2c53/2015-12-15T13:05:55Z]
+[2016-03-28 19:42:19,110][INFO ][node                     ] [Captain Omen] initializing ...
+[2016-03-28 19:42:19,174][INFO ][plugins                  ] [Captain Omen] loaded [], sites []
+[2016-03-28 19:42:19,211][INFO ][env                      ] [Captain Omen] using [1] data paths, mounts [[OS (C:)]], net usable_space [148.4gb], net total_space [237.7gb], spins? [unknown], types [NTFS]
+[2016-03-28 19:42:21,607][INFO ][node                     ] [Captain Omen] initialized
+[2016-03-28 19:42:21,609][INFO ][node                     ] [Captain Omen] starting ...
+[2016-03-28 19:42:21,910][INFO ][transport                ] [Captain Omen] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-03-28 19:42:21,927][INFO ][discovery                ] [Captain Omen] elasticsearch/1kMyEKzJQcCuKWRJrlcrrA
+[2016-03-28 19:42:25,989][INFO ][cluster.service          ] [Captain Omen] new_master {Captain Omen}{1kMyEKzJQcCuKWRJrlcrrA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-03-28 19:42:26,177][INFO ][gateway                  ] [Captain Omen] recovered [3] indices into cluster_state
+[2016-03-28 19:42:26,524][INFO ][http                     ] [Captain Omen] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-03-28 19:42:26,528][INFO ][node                     ] [Captain Omen] started
+[2016-03-28 22:41:07,686][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@118f373] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,686][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@118f373]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,686][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@118f373] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,686][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@118f373] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,686][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@118f373] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,725][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:07,778][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:41:10,534][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@151d98c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,535][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@151d98c]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,535][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@151d98c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,535][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@151d98c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,534][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@151d98c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,564][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:41:10,622][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"collocation": "блестеть как алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:42:36,970][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@f4910d] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:36,970][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@f4910d]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:36,970][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@f4910d] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:36,970][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@f4910d] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:36,970][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@f4910d] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:37,006][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:37,067][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:42:39,043][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@10fca79] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,043][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@10fca79]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,043][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@10fca79] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,043][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@10fca79] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,043][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@10fca79] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,080][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	... 10 more
+[2016-03-28 22:42:39,135][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match all": {"noun": "алмаз"}}}]]; nested: QueryParsingException[No query registered for [match all]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: [verbs] QueryParsingException[No query registered for [match all]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:255)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:303)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:206)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:201)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:831)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:46:24,012][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bb31e4] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,013][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bb31e4]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,013][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bb31e4] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,013][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bb31e4] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,013][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bb31e4] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,039][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:24,082][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:46:27,041][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@cad54c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,042][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@cad54c]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,042][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@cad54c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,041][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@cad54c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,041][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@cad54c] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,065][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:27,110][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 22:46:31,135][DEBUG][action.search.type       ] [Captain Omen] [verbs][0], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JqG-S3iTRyGZ6UMCdV0tIQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b190f6] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,135][DEBUG][action.search.type       ] [Captain Omen] [verbs][1], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=3Q__2dnXTiqZ0NUOeHRirg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b190f6]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,135][DEBUG][action.search.type       ] [Captain Omen] [verbs][3], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=rSws4TbzQmmnBG6qWPujdg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b190f6] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,135][DEBUG][action.search.type       ] [Captain Omen] [verbs][2], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=JF2XqrQYQB6sEQlYTehIDQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b190f6] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,135][DEBUG][action.search.type       ] [Captain Omen] [verbs][4], node[1kMyEKzJQcCuKWRJrlcrrA], [P], v[6], s[STARTED], a[id=XXzHXlNLSMiJeu9YOytDAQ]: Failed to execute [org.elasticsearch.action.search.SearchRequest@b190f6] lastShard [true]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,167][DEBUG][action.search.type       ] [Captain Omen] All shards failed for phase: [query]
+RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:848)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	... 10 more
+[2016-03-28 22:46:31,219][INFO ][rest.suppressed          ] /verbs/_search Params: {index=verbs}
+Failed to execute phase [query], all shards failed; shardFailures {[1kMyEKzJQcCuKWRJrlcrrA][verbs][0]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][1]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][2]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][3]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }{[1kMyEKzJQcCuKWRJrlcrrA][verbs][4]: RemoteTransportException[[Captain Omen][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"match": {"collocation": "блестеть как алмаз"}}, "type": "phrase"}]]; nested: SearchParseException[failed to parse search source. unknown search element [type]]; }
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction.onFirstPhaseResult(TransportSearchTypeAction.java:228)
+	at org.elasticsearch.action.search.type.TransportSearchTypeAction$BaseAsyncAction$1.onFailure(TransportSearchTypeAction.java:174)
+	at org.elasticsearch.action.ActionListenerResponseHandler.handleException(ActionListenerResponseHandler.java:46)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.processException(TransportService.java:821)
+	at org.elasticsearch.transport.TransportService$DirectResponseChannel.sendResponse(TransportService.java:799)
+	at org.elasticsearch.transport.TransportService$4.onFailure(TransportService.java:361)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: SearchParseException[failed to parse search source. unknown search element [type]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:829)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:651)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:617)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:350)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	... 3 more
+[2016-03-28 23:22:35,359][INFO ][rest.suppressed          ] /verbs Params: {index=verbs}
+ElasticsearchParseException[failed to parse source for create index]; nested: JsonParseException[Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@83cb4f; line: 15, column: 28]];
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:370)
+	at org.elasticsearch.rest.action.admin.indices.create.RestCreateIndexAction.handleRequest(RestCreateIndexAction.java:47)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@83cb4f; line: 15, column: 28]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:269)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:245)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.map(AbstractXContentParser.java:208)
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:368)
+	... 45 more
+[2016-03-28 23:23:27,834][INFO ][rest.suppressed          ] /verbs Params: {index=verbs}
+ElasticsearchParseException[failed to parse source for create index]; nested: JsonParseException[Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@1d518ab; line: 15, column: 28]];
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:370)
+	at org.elasticsearch.rest.action.admin.indices.create.RestCreateIndexAction.handleRequest(RestCreateIndexAction.java:47)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@1d518ab; line: 15, column: 28]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:269)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:245)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.map(AbstractXContentParser.java:208)
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:368)
+	... 45 more
+[2016-03-28 23:25:59,234][INFO ][rest.suppressed          ] /verbs Params: {index=verbs}
+ElasticsearchParseException[failed to parse source for create index]; nested: JsonParseException[Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@746203; line: 15, column: 28]];
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:370)
+	at org.elasticsearch.rest.action.admin.indices.create.RestCreateIndexAction.handleRequest(RestCreateIndexAction.java:47)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): was expecting comma to separate OBJECT entries
+ at [Source: [B@746203; line: 15, column: 28]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1581)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:533)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:462)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:727)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:53)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:269)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readValue(AbstractXContentParser.java:314)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:274)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.readMap(AbstractXContentParser.java:245)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.map(AbstractXContentParser.java:208)
+	at org.elasticsearch.action.admin.indices.create.CreateIndexRequest.source(CreateIndexRequest.java:368)
+	... 45 more
