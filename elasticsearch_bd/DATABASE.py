@@ -100,11 +100,12 @@ def class_n():
 def classes():
     try:
         req = request.args['cl']
-        res = es.search(index="verbs", body={"query": {"match": {'tax_verb': req}}})
+        res = es.search(index="verbs", body={"from": 0, "size": 500, "query": {"match": {'tax_verb': req}}})
         arr = []
         if res:
             for hit in res['hits']['hits']:
-                arr.append(hit['_source']['class_noun'])
+                if hit['_score'] >= 2.0:
+                    arr.append(hit['_source']['class_noun'])
             arr = set(arr)
             note = u'<p style="margin-left: 20px">Выявлены следующие закономерности у класса глаголов "<b>' + req + '</b>":</p>'
             return render_template('res_cl.html', note=note, arr=arr)
